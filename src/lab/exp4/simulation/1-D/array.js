@@ -6,6 +6,9 @@ window.view = {
 	j: 0,
 	key: 0,
 	m: 0,
+
+
+	
 	changeClass: function(id, className) {
 		document.getElementById(id).className = className
 	},
@@ -22,6 +25,8 @@ window.view = {
 		this.key = 0
 		this.m = 0
 	},
+
+
 	getNextDivToHighlight: function(lastHighlightedDiv) {
 		var next = lastHighlightedDiv.nextSibling
 		next = next.nextSibling
@@ -97,7 +102,10 @@ window.view = {
 			if ( i === 0 )
 				element.className = 'sortedArray'
 			else if ( i === 1 )
+			{
 				element.className = 'keyPosition'
+				this.showImage();
+			}
 			else
 				element.className = 'unSortedArray'
 			outerDiv.appendChild(element)
