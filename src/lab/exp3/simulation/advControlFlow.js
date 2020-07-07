@@ -34,6 +34,12 @@ window.view = {
  	},
 	getInput: function() {
 		var inputValue = document.getElementById('simpleLoopInput').value
+		var num1=Number(inputValue)
+		if(num1>20 || num1<0)
+		{
+			alert("invalid input");
+			return false;
+		}
 		model.inp = Number(inputValue)
 		this.clearExecutionSection()
 	},
