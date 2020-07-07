@@ -392,3 +392,17 @@ window.view = {
 window.onload = function () {
 	view.init();
 }
+
+function checkNumber()
+{
+	var val1=document.getElementById("valueA").value;
+	var num1=parseInt(val1);
+	var val2=document.getElementById("valueB").value;
+	var num2=parseInt(val2);
+	if(num1<0 ||num1>10 || num2<0 || num2>10)
+	{
+		alert("invalid input");
+		return false;
+	}
+	else true;
+}
