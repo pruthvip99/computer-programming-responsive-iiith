@@ -20,7 +20,11 @@ window.view = {
 	getInput: function() {
 		 var input = Number(document.getElementById('input').value)
 		 if ( input === 0 )
-		 	alert('Enter number of disks first !')
+			 alert('Enter number of disks first !')
+			 else if(input<0||input>10){
+			 alert('invalid input')
+			 return false;
+			 }
 		 else if ( isNaN(input) === true )
 			alert('Number of disks must be an integer value !')
 		 else if ( input > 5 || input % 1 !== 0 )
